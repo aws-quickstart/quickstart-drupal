@@ -74,11 +74,11 @@
             "Type": "String"
         },
         "DBMasterUserPassword": {
-            "AllowedPattern": "(?=^.{6,255}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*",
-            "ConstraintDescription": "Min 8 chars.",
+            "AllowedPattern": "(?=\\S)[^@\/\"\\r\\n\\t\\f\\s]*",
+            "ConstraintDescription": "Min 8 alphanumeric. Cannot contain white space, @, /, \"",
             "Default": "Admin-123456",
             "Description": "The database admin account password",
-            "MaxLength": "64",
+            "MaxLength": "41",
             "MinLength": "8",
             "NoEcho": "True",
             "Type": "String"
